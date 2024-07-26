@@ -36,25 +36,26 @@ public class ReadAccountDetails extends HttpServlet{
 				stmt.setInt(1, id);
 				
 				rs = stmt.executeQuery(); 
+				res.setContentType("text/html");
+				PrintWriter pw = res.getWriter();
 				
-				while(rs.next()) {
+				if(rs.next()) {
 					name = rs.getString("name");
 					salary = rs.getInt("salary");
+					pw.write("Record Details");
+					pw.write("Name: " +name+
+							" ID: " +id+
+							" Salary: " +salary);
+					
+				}else {
+					pw.write("No Such Record");
 				}
-
+				pw.close();
 				con.close();
 			
 			} catch (Exception e) {
 				e.printStackTrace();
-			}
-
-			
-			res.setContentType("text/html");
-			PrintWriter pw = res.getWriter();
-			pw.write("Name: " +name+
-					" ID: " +id+
-					" Salary: " +salary);
-			pw.close();			
+			}			
 			
 		}
 }
