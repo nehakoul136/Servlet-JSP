@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>ServletProject</display-name>
+  <welcome-file-list>
+    <welcome-file>home.html</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+  <servlet-name>createAccount</servlet-name>
+  <servlet-class>com.veracity.CreateAccount</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>createAccount</servlet-name>
+  <url-pattern>/create</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>updateAccount</servlet-name>
+  <servlet-class>com.veracity.UpdateAccount</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>updateAccount</servlet-name>
+  <url-pattern>/update</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+  <servlet-name>readAccount</servlet-name>
+  <servlet-class>com.veracity.ReadAccountDetails</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>readAccount</servlet-name>
+  <url-pattern>/read</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>deleteAccount</servlet-name>
+  <servlet-class>com.veracity.DeleteAccount</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>deleteAccount</servlet-name>
+  <url-pattern>/delete</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+</web-app>
