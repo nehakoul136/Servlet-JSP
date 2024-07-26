@@ -46,7 +46,15 @@
   <url-pattern>/delete</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+  <servlet-name>readAll</servlet-name>
+  <servlet-class>com.veracity.ReadAll</servlet-class>
+  </servlet>
   
+  <servlet-mapping>
+  <servlet-name>readAll</servlet-name>
+  <url-pattern>/readAll</url-pattern>
+  </servlet-mapping>
   
   
 </web-app>
